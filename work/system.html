@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>mac桌面</title>
+    <link href="include/photo/apple_logo/apple.ico" rel="shortcut icon">
+    <script type="text/javascript" src="include/js/jquery-2.2.4.min.js"></script>
+    <link href="include/css/animate.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="include/component/layer-v3.0.3/layer/layer.js"></script>
+    <link href="include/component/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="include/css/macdefault.css" rel="stylesheet" type="text/css">
+    <link href="include/css/player.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="include/js/mac.js"></script>
+</head>
+<body>
+<div id="win10">
+    <div class="desktop">
+        <div id="win10-shortcuts" class="shortcuts-hidden">
+            <div class="shortcut" onclick="Win10.openUrl('https://china-media.github.io//official/home.html','<img class=\'icon\' src=\'include/photo/icon/gamecenter.png\'/>中影传媒')">
+                <img class="icon" src="include/photo/icon/gamecenter.png"/>
+                <div class="title">中影传媒</div>
+            </div>
+            <div class="shortcut" onclick="Win10.openUrl('https://geekparks.github.io/work/home','<img class=\'icon\' src=\'include/photo/icon/trashicon.png\'/>极客国际公园')">
+                <img class="icon" src="include/photo/icon/trashicon.png"/>
+                <div class="title">极客国际公园</div>
+            </div>
+            <div class="shortcut" onclick="Win10.openUrl('https://www.zybuluo.com/mdeditor','<img class=\'icon\' src=\'include/photo/icon/pref.png\'/>Markdown')">
+                <img class="icon" src="include/photo/icon/pref.png"/>
+                <div class="title">Markdown</div>
+            </div>
+            <div class="shortcut" onclick="Win10.openUrl('https://juejin.im/','<img class=\'icon\' src=\'include/photo/icon/find-iPhone.png\'/>掘金')">
+                <img class="icon" src="include/photo/icon/find-iPhone.png"/>
+                <div class="title">掘金</div>
+            </div>
+            <div class="shortcut" onclick="Win10.openUrl('https://www.oschina.net/','<img class=\'icon\' src=\'include/photo/icon/terminal.png\'/>开源中国')">
+                <img class="icon" src="include/photo/icon/terminal.png"/>
+                <div class="title">开源中国</div>
+            </div>
+            <div class="shortcut" onclick="Win10.openUrl('http://music.163.com/','<img class=\'icon\' src=\'include/photo/icon/itunes.png\'/>网易云音乐')">
+                <img class="icon" src="include/photo/icon/itunes.png"/>
+                <div class="title">网易云音乐</div>
+            </div>
+            <div class="shortcut" onclick="Win10.openUrl('https://www.bilibili.com/','<img class=\'icon\' src=\'include/photo/icon/videos.png\'/>bilibili')">
+                <img class="icon" src="include/photo/icon/videos.png"/>
+                <div class="title">bilibili</div>
+            </div>
+            <div class="shortcut" onclick="Win10.openUrl('https://www.imooc.com/','<img class=\'icon\' src=\'include/photo/icon/iTunes-U.png\'/>慕课')">
+                <img class="icon" src="include/photo/icon/iTunes-U.png"/>
+                <div class="title">慕课</div>
+            </div>
+            <div class="shortcut" onclick="Win10.openUrl('http://www.runoob.com/','<img class=\'icon\' src=\'include/photo/icon/tips.png\'/>菜鸟教程')">
+                <img class="icon" src="include/photo/icon/tips.png"/>
+                <div class="title">菜鸟教程</div>
+            </div>
+            <div class="shortcut" onclick="Win10.openUrl('https://www.yiibai.com/','<img class=\'icon\' src=\'include/photo/icon/tips.png\'/>易百教程')">
+                <img class="icon" src="include/photo/icon/tips.png"/>
+                <div class="title">易百教程</div>
+            </div>
+            <div class="shortcut" onclick="Win10.openUrl('https://www.ibm.com/cn-zh/?lnk=fcc','<img class=\'icon\' src=\'include/photo/icon/pulp.png\'/>IBM')">
+                <img class="icon" src="include/photo/icon/pulp.png"/>
+                <div class="title">IBM</div>
+            </div>
+            <div class="shortcut" onclick="Win10.openUrl('https://china-media.github.io//official/work/broadcast/programmer_broadcast.html','<img class=\'icon\' src=\'include/photo/icon/iTunes-Radio.png\'/>程序人生广播剧')">
+                <img class="icon" src="include/photo/icon/iTunes-Radio.png"/>
+                <div class="title">程序人生广播剧</div>
+            </div>
+            <div class="shortcut" onclick="Win10.openUrl('https://jeep711.github.io/Home/','<img class=\'icon\' src=\'include/photo/icon/computer.png\'/>维护作者')">
+                <img class="icon" src="include/photo/icon/computer.png"/>
+                <div class="title">维护作者</div>
+            </div>
+        </div>
+    </div>
+    <div id="win10-menu" class="hidden">
+        <div class="list win10-menu-hidden animated animated-slideOutLeft">
+            <div class="item"><i class="icon fa fa-wrench fa-fw"></i><span>API测试</span></div>
+            <div class="sub-item" onclick="Win10.commandCenterOpen()">打开消息中心</div>
+            <div class="sub-item" onclick="Win10.menuClose()">关闭菜单</div>
+            <div class="item" onclick="Win10.aboutUs()"><i class="icon fa fa-star fa-fw"></i>关于</div>
+        </div>
+    </div>
+    <div id="win10_command_center" class="hidden_right">
+        <div class="title">
+            <h4 style="float: left">消息中心 </h4>
+            <span id="win10_btn_command_center_clean_all">全部清除</span>
+        </div>
+        <div class="msgs"></div>
+    </div>
+    <div id="win10_task_bar">
+        <div id="win10_btn_group_left" class="btn_group">
+            <div id="win10_btn_win" class="btn"><span class="fa fa-apple"></span></div>
+            <div class="btn" id="win10-btn-browser"><span class="fa fa-safari"></span></div>
+        </div>
+        <div id="win10_btn_group_middle" class="btn_group"></div>
+        <div id="win10_btn_group_right" class="btn_group">
+            <div class="btn" id="win10_btn_time">
+                <!--0:00<br/>-->
+            </div>
+            <div class="btn" id="win10_btn_command"><span id="win10-msg-nof" class="fa fa-list-ul"></span></div>
+            <div class="btn" id="win10_btn_show_desktop"></div>
+        </div>
+    </div>
+	<!-- Mac OS Dock-->
+	<div id="footer">
+       <div id="QPlayer">
+          <div id="pContent">
+            <div id="player"> <span class="cover"></span>
+              <div class="ctrl">
+                <div class="musicTag marquee"> <strong>Title</strong> <span> - </span> <span class="artist">Artist</span> </div>
+                <div class="progress">
+                  <div class="timer left">0:00</div>
+                  <div class="contr">
+                    <div class="rewind icon"></div>
+                    <div class="playback icon"></div>
+                    <div class="fastforward icon"></div>
+                  </div>
+                  <div class="right">
+                    <div class="liebiao icon"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ssBtn">
+              <div class="adf"></div>
+            </div>
+          </div>
+          <ol id="playlist"></ol>
+        </div>
+        <div class="dock">
+            <ul>
+                <li><span class="dock-tips">极客作者<span class="arrow"></span></span>
+                <a onclick="Win10.openUrl('https://jeep711.github.io/Home/','<img class=\'icon\' src=\'include/photo/icon/computer.png\'/>极客作者')">
+                <img src="include/photo/icon/computer.png">
+                </a>
+                </li>
+                <li><span class="dock-tips">中影传媒<span class="arrow"></span></span>
+                <a onclick="Win10.openUrl('https://china-media.github.io//official/home.html','<img class=\'icon\' src=\'include/photo/icon/gamecenter.png\'/>中影传媒')">
+                <img src="include/photo/icon/gamecenter.png">
+                </a>
+                </li>
+				<li><span class="dock-tips">极客国际公园<span class="arrow"></span></span>
+          		<a onclick="Win10.openUrl('https://geekparks.github.io/work/home','<img class=\'icon\' src=\'include/photo/icon/trashicon.png\'/>极客国际公园')">
+          		<img src="include/photo/icon/trashicon.png">
+          		</a>
+          		</li>
+           		<li><span class="dock-tips">Setting<span class="arrow"></span></span>
+           		<a onclick="Win10.aboutUs()">
+           		<img src="include/photo/icon/prefapp.png">
+           		</a>
+           		</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="include/js/player.js"></script>
+<script>
+		function bgChange(){
+		var lis= $('.lib');
+		for(var i=0; i<lis.length; i+=2)
+		lis[i].style.background = 'rgba(246, 246, 246, 0.5)';
+		}
+		window.onload = bgChange;
+</script>
+</body>
+</html>
