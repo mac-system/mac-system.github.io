@@ -62,8 +62,10 @@ body {
 
 #win10 .desktop {
 	padding-top:30px;
+	overflow-y: hidden;
     width: 100%;
     height: 100%;
+	
 }
 
 #win10_task_bar {
