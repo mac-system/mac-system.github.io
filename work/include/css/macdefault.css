@@ -17,7 +17,6 @@ body {
     margin: 0;
     height: 100%;
     overflow: hidden;
-	overflow-y:hidden;
 }
 
 #win10 *{
@@ -44,7 +43,6 @@ body {
     background: black no-repeat fixed;
     background-size: 100% 100%;
     position: relative;
-    padding-top: 20px;
 }
 
 #win10 *{
